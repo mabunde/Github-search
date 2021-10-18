@@ -8,12 +8,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
+import { SearchComponent } from './search/search.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    DateCountPipe
+    DateCountPipe,
+    SearchComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
