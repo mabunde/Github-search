@@ -14,8 +14,8 @@ export class SearchComponent implements OnInit {
     isNotEmpty: boolean;
     profileService: ProfileService;
 
-  constructor(dataService: ProfileService, private router: Router) {
-    this.profileService = dataService;
+  constructor(profileService: ProfileService, private router: Router) {
+    this.profileService = profileService;
    }
 
   startSearch(){
