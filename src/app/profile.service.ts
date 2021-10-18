@@ -14,8 +14,6 @@ export class ProfileService {
   repository: Repository;
   repos = [];
 
-
-
 constructor(private http: HttpClient, private router: Router) {
     this.user = new User("", "", "", 0, 0, 0, new Date(), "", "",new Date());
     this.repository = new Repository("", "", 0,"", new Date());
