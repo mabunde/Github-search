@@ -15,13 +15,18 @@ input {
   padding: 1rem 0;
   width: 80%;
 }
+#username {
+  border-radius: 10px;
+  font-size: 17px;
+  margin-left: 10px;
+}
 button {
   padding: 1rem 2rem;
   background-color: #452727;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 20px;
   margin: 0 auto;
 }
 .userDetails-container {
@@ -31,4 +36,11 @@ button {
   border: 3px solid #452727;
   background-color: #ecf0f3;
   border-radius: 20px;
+}
+#Details {
+}
+.repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
