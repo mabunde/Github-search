@@ -11,6 +11,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AboutComponent } from './about/about.component';
     DateCountPipe,
     SearchComponent,
     ProfileComponent,
-    AboutComponent
+    AboutComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
