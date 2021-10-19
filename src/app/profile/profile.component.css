@@ -8,6 +8,13 @@
 .searchProfile {
   padding: 3% 10%;
 }
+.btn1 {
+  display: flex;
+  flex-direction: row;
+}
+#avatar1 {
+  justify-content: center;
+}
 
 input {
   background-color: #fff;
@@ -37,8 +44,7 @@ button {
   background-color: #ecf0f3;
   border-radius: 20px;
 }
-#Details {
-}
+
 .repos {
   display: flex;
   flex-direction: column;

@@ -6,9 +6,9 @@
     </section>
     <div class="searchProfile">
         <form (ngSubmit)="startSearch()">
-            <div class="my-4">
+            <div class="btn1">
                 <input class="form-control" type="text" id="username" name="username" [(ngModel)]="username"
-                    placeholder="Search your username..." required />&nbsp;
+                    placeholder="Search your username..." required /> <br>
                 <button type="submit" class="btn btn-outline-success ">
                     Search
                 </button>
@@ -17,21 +17,22 @@
     </div>
     <section>
 
-        <div class="row">
-            <div class="col-md-6">
-                <img class="avatar" src="{{user.avatar_url}} " alt="user profile pic">
-                <div class="viewprofile">
-                    <a href="{{ user.html_url }}" target="_blank"><button>View Profile</button></a>
-                </div>
-            </div>
+        <div class="row" id="userd">
             <div class="col-md-6">
                 <div class="userDetails-container">
                     <h3><i class="fa fa-user"></i> Username: {{ user.login }}</h3>
                     <h3><i class="fa fa-users"></i> Followers: {{user.followers}}</h3>
                     <h3><i class="fa fa-users"></i> Following: {{user.following}}</h3>
-                    <h3><i class="fa fa-file-code"></i> No. of repos: {{user.public_repos}}</h3>
+                    <h3><i class="fa fa-server"></i> No. of repos: {{user.public_repos}}</h3>
                     <h3><i class="fa fa-table"></i> Joined: {{user.created_at| date}}</h3>
                     <h3><i class="fa fa-table"></i> Updated: {{user.updated_at| date}}</h3>
+                </div>
+            </div>
+            <div class="col-md-6" id="avatar1">
+                <img class="avatar" src="{{user.avatar_url}} " alt="user profile pic"><br> <br>
+                <div class="viewprofile">
+                    <a href="{{ user.html_url }}" target="_blank"><button class="btn btn-outline-success">View
+                            Profile</button></a>
                 </div>
             </div>
         </div>
@@ -49,7 +50,7 @@
                     </span>
                     <h3>Number of forks: {{repo.forks_count}}</h3>
                     <h3>Created At: {{repo.created_at | date}}</h3>
-                    <a href="{{repo.html_url}}"><button>View</button></a>
+                    <a href="{{repo.html_url}}"><button class="btn btn-outline-success">View</button></a>
 
                 </div>
             </div>
