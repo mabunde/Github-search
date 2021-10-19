@@ -1,58 +1,59 @@
-<section id="user">
-    <div class="header">
-        <h1>Search User</h1>
-    </div>
-</section>
-
-<div class="searchProfile">
-    <form (ngSubmit)="startSearch()">
-        <div class="my-4">
-            <input class="form-control" type="text" id="username" name="username" [(ngModel)]="username"
-                placeholder="Search your username..." required />&nbsp;
-            <button type="submit" class="btn btn-outline-success ">
-                Search
-            </button>
-        </div>
-    </form>
-</div>
-<section>
-
-    <div class="row">
-        <div class="col-md-6">
-            <img class="avatar" src="{{user.avatar_url}} " alt="user profile pic">
-            <div class="viewprofile">
-                <a href="{{ user.html_url }}" target="_blank"><button>View Profile</button></a>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="userDetails-container">
-                <h3><i class="fa fa-user"></i> Username: {{ user.login }}</h3>
-                <h3><i class="fa fa-users"></i> Followers: {{user.followers}}</h3>
-                <h3><i class="fa fa-users"></i> Following: {{user.following}}</h3>
-                <h3><i class="fa fa-file-code"></i> No. of repos: {{user.public_repos}}</h3>
-                <h3><i class="fa fa-table"></i> Joined: {{user.created_at| date}}</h3>
-                <h3><i class="fa fa-table"></i> Updated: {{user.updated_at| date}}</h3>
-            </div>
-        </div>
-    </div>
-    <hr>
-
-    <div id="repos-found">
+<div class="container">
+    <section id="user">
         <div class="header">
-            <h1>{{user.login}} Repositories </h1>
+            <h1>Search User</h1>
         </div>
-        <div class="repos">
-            <div *ngFor='let repo of repos' class="userDetails-container col-md-6">
-                <h3>Name: {{repo.name}}</h3>
-                <h3>Description:</h3><span>
-                    <p>{{repo.description}}</p>
-                </span>
-                <h3>Number of forks: {{repo.forks_count}}</h3>
-                <h3>Created At: {{repo.created_at | date}}</h3>
-                <a href="{{repo.html_url}}"><button>View</button></a>
+    </section>
+    <div class="searchProfile">
+        <form (ngSubmit)="startSearch()">
+            <div class="my-4">
+                <input class="form-control" type="text" id="username" name="username" [(ngModel)]="username"
+                    placeholder="Search your username..." required />&nbsp;
+                <button type="submit" class="btn btn-outline-success ">
+                    Search
+                </button>
+            </div>
+        </form>
+    </div>
+    <section>
 
+        <div class="row">
+            <div class="col-md-6">
+                <img class="avatar" src="{{user.avatar_url}} " alt="user profile pic">
+                <div class="viewprofile">
+                    <a href="{{ user.html_url }}" target="_blank"><button>View Profile</button></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="userDetails-container">
+                    <h3><i class="fa fa-user"></i> Username: {{ user.login }}</h3>
+                    <h3><i class="fa fa-users"></i> Followers: {{user.followers}}</h3>
+                    <h3><i class="fa fa-users"></i> Following: {{user.following}}</h3>
+                    <h3><i class="fa fa-file-code"></i> No. of repos: {{user.public_repos}}</h3>
+                    <h3><i class="fa fa-table"></i> Joined: {{user.created_at| date}}</h3>
+                    <h3><i class="fa fa-table"></i> Updated: {{user.updated_at| date}}</h3>
+                </div>
             </div>
         </div>
-    </div>
+        <hr>
 
-</section>
+        <div id="repos-found">
+            <div class="header">
+                <h1>{{user.login}} Repositories </h1>
+            </div>
+            <div class="repos">
+                <div *ngFor='let repo of repos' class="userDetails-container col-md-6">
+                    <h3>Name: {{repo.name}}</h3>
+                    <h3>Description:</h3><span>
+                        <p>{{repo.description}}</p>
+                    </span>
+                    <h3>Number of forks: {{repo.forks_count}}</h3>
+                    <h3>Created At: {{repo.created_at | date}}</h3>
+                    <a href="{{repo.html_url}}"><button>View</button></a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
