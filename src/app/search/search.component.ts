@@ -10,26 +10,14 @@ import { ProfileService } from '../profile.service';
 })
 export class SearchComponent implements OnInit {
 
-    username: string;
-    isNotEmpty: boolean;
+
     profileService: ProfileService;
 
   constructor(profileService: ProfileService, private router: Router) {
     this.profileService = profileService;
    }
 
-  startSearch(){
-    if(this.username){
-        this.profileService.getData(this.username);
-        this.router.navigate(['../results']);
-    }else{
-        this.isNotEmpty = true;
-    }
-  }
-
-
   ngOnInit(): void {
-      this.isNotEmpty = false;
 
 }
 }

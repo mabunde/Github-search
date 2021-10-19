@@ -10,14 +10,26 @@ import { ProfileService } from '../profile.service';
 })
 export class ProfileComponent implements OnInit {
 
+  username: string;
+
   user: User;
   repos = [];
   profileService: ProfileService;
   router: Router;
+  empty:boolean;
 
 constructor(profileService: ProfileService, router: Router) { 
     this.profileService = profileService;
     this.router = router;
+}
+
+startSearch(){
+  if(this.username){
+      this.profileService.getData(this.username);
+      this.router.navigate(['../results']);
+  }else{
+      this.empty = true;
+  }
 }
 
 

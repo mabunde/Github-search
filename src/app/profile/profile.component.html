@@ -3,11 +3,17 @@
         <h1>Search User</h1>
     </div>
 </section>
+
 <div class="searchProfile">
-
-    <input type="text" [(ngModel)]="userName" name="userName" aria-label="Search">
-    <a href="#user-profile"><button (click)="SendUsers($event)">Search</button></a>
-
+    <form (ngSubmit)="startSearch()">
+        <div class="my-4">
+            <input class="form-control" type="text" id="username" name="username" [(ngModel)]="username"
+                placeholder="Search your username..." required />
+            <button type="submit" class="btn btn-outline-success ">
+                Search
+            </button>
+        </div>
+    </form>
 </div>
 <section>
 
