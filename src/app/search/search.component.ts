@@ -26,9 +26,7 @@ export class SearchComponent implements OnInit {
         this.isNotEmpty = true;
     }
   }
-  hideAlert(){
-      this.isNotEmpty = false;
-  }
+
 
   ngOnInit(): void {
       this.isNotEmpty = false;
