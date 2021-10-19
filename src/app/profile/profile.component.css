@@ -15,6 +15,9 @@
 #avatar1 {
   justify-content: center;
 }
+.viewprofile {
+  margin-left: 35px;
+}
 
 input {
   background-color: #fff;
